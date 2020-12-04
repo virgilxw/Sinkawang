@@ -111,4 +111,150 @@ $(document).ready(function () {
 			}
 		})
 	})
+
+	// Search
+	var $select = $('#select-id').selectize({
+		maxItems: null,
+		valueField: 'id',
+		labelField: 'name',
+		searchField: ['id', 'name'],
+		options: [],
+		create: false,
+		render: {
+			item: function (item, escape) {
+				return '<div>' +
+					(item.id ? '<span class="title">' + escape(item.id) + '</span>' : '') +
+					(item.name ? '<span class="subtitle">' + escape(item.name) + '</span>' : '') +
+					'</div>';
+			},
+			option: function (item, escape) {
+				console.log(item)
+				var label = item.name || item.id;
+				var caption = item.name ? item.id : null;
+				return '<div>' +
+					(caption ? '<span class="title">' + escape(caption) + '</span>' : '') +
+					'<span class="subtitle">' + escape(label) + '</span>' +
+					'</div>';
+			},
+		},
+		onItemAdd: function (val) {
+
+			highlightlayerUID(val)
+		},
+		onItemRemove: function (val) {
+			clearlayerUID(e.params.data.id)
+		},
+		load: function (query, callback) {
+			if (!query.length) return callback();
+			$.ajax({
+				url: './assets/json/2_combined.json',
+				type: 'GET',
+				dataType: 'json',
+				data: {},
+				error: function () {
+					callback();
+				},
+				success: function (res) {
+					callback(res);
+				}
+			});
+		}
+	})
+
+	// Search
+	var $select = $('#select-chinese').selectize({
+		maxItems: null,
+		valueField: 'id',
+		labelField: 'name',
+		searchField: 'name_chinese',
+		options: [],
+		create: false,
+		render: {
+			item: function (item, escape) {
+				return '<div>' +
+					(item.id ? '<span class="title">' + escape(item.id) + '</span>' : '') +
+					(item.name_chinese ? '<span class="subtitle">' + escape(item.name_chinese) + '</span>' : '') +
+					'</div>';
+			},
+			option: function (item, escape) {
+				console.log(item)
+				var label = item.name_chinese || item.id;
+				var caption = item.name_chinese ? item.id : null;
+				return '<div>' +
+					(caption ? '<span class="title">' + escape(caption) + '</span>' : '') +
+					'<span class="subtitle">' + escape(label) + '</span>' +
+					'</div>';
+			},
+		},
+		onItemAdd: function (val) {
+
+			highlightlayerUID(val)
+		},
+		onItemRemove: function (val) {
+			clearlayerUID(e.params.data.id)
+		},
+		load: function (query, callback) {
+			if (!query.length) return callback();
+			$.ajax({
+				url: './assets/json/2_combined.json',
+				type: 'GET',
+				dataType: 'json',
+				data: {},
+				error: function () {
+					callback();
+				},
+				success: function (res) {
+					callback(res);
+				}
+			});
+		}
+	})
+
+	var $select = $('#select-address').selectize({
+		maxItems: null,
+		valueField: 'id',
+		labelField: 'name',
+		searchField: 'address',
+		options: [],
+		create: false,
+		render: {
+			item: function (item, escape) {
+				return '<div>' +
+					(item.id ? '<span class="title">' + escape(item.id) + '</span>' : '') +
+					(item.address ? '<span class="subtitle">' + escape(item.address) + '</span>' : '') +
+					'</div>';
+			},
+			option: function (item, escape) {
+				console.log(item)
+				var label = item.address || item.id;
+				var caption = item.address ? item.id : null;
+				return '<div>' +
+					(caption ? '<span class="title">' + escape(caption) + '</span>' : '') +
+					'<span class="subtitle">' + escape(label) + '</span>' +
+					'</div>';
+			},
+		},
+		onItemAdd: function (val) {
+
+			highlightlayerUID(val)
+		},
+		onItemRemove: function (val) {
+			clearlayerUID(e.params.data.id)
+		},
+		load: function (query, callback) {
+			if (!query.length) return callback();
+			$.ajax({
+				url: './assets/json/2_combined.json',
+				type: 'GET',
+				dataType: 'json',
+				data: {},
+				error: function () {
+					callback();
+				},
+				success: function (res) {
+					callback(res);
+				}
+			});
+		}
+	})
 })

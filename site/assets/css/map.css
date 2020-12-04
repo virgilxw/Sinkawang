@@ -65,3 +65,18 @@
 h4 {
 	margin-top: 0;
 }
+
+.title {
+	padding: 5px 8px;
+	font-size: 13px;
+	line-height: 18px;
+	color: #303030;
+}
+
+.subtitle {
+	font-size: 8px;
+	display: block;
+	opacity: 0.5;
+	line-height: 18px;
+	color: #303030;
+}
