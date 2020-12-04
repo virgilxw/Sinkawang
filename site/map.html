@@ -10,7 +10,7 @@ title: Overview Map
 	<div class="leaflet-sidebar-tabs">
 		<ul role="tablist">
 			<li><a href="#intro" role="tab"><i class="fa fa-user"></i></a></li>
-			<li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
+			<li><a href="#messages" role="tab"><i class="fa fa-search"></i></a></li>
 		</ul>
 
 		<ul role="tablist">
@@ -20,24 +20,67 @@ title: Overview Map
 
 	<!-- Tab panes -->
 	<div class="leaflet-sidebar-content">
+
 		<div class="leaflet-sidebar-pane" id="intro">
 			<h1 class="leaflet-sidebar-header">
 				Welcome to Sinkawang
 				<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
 			</h1>
-			<h2>Here, you can view the ma</h2>
-			<ul>
-				<li><a href="./position-right.html">Right aligned</a></li>
-				<li><a href="./leaflet-0.7.html">Proof that it works with leaflet 0.7 ;)</a></li>
-			</ul>
 
-			<p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<h4>the City of a Thousand Temples</h4>
+
+			<p>Singkawang is a city of 200,000 people located in Kalimantan, Indonesia. The city is distinct as it is an ethnic enclave. The majority of its population are Hakka, a Han Chinese people who speak their own language.</p>
+			<p>Nowhere is the cultural identity of the city more visible than in its hundreds of Daoist and Buddhist temples.</p>
+			<p>This website is designed to facilitate the exploration of the city's many temples.</p>
+			<p>The data was obtained by Dr Emily Hertzman through on-the-ground field work.</p>
+
+			<div class="ui styled accordion" id="category">
+				<div class="active title" id="radio-default">
+					<i class="dropdown icon"></i>
+					Default (no categories)
+				</div>
+				<div class="active content">
+					<p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+				</div>
+				<div class="title" id="radio-region">
+					<i class="dropdown icon"></i>
+					Categorize by District
+				</div>
+				<div class="content swatches">
+					<div class="row">
+						<div class="swatch lightblue"></div>
+						<p>West</p>
+					</div>
+					<div class="row">
+						<div class="swatch darkblue"></div>
+						<p>Central</p>
+					</div>
+					<div class="row">
+						<div class="swatch lightgreen"></div>
+						<p>South</p>
+					</div>
+					<div class="row">
+						<div class="swatch darkgreen"></div>
+						<p>East</p>
+					</div>
+					<div class="row">
+						<div class="swatch pink"></div>
+						<p>North</p>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="leaflet-sidebar-pane" id="messages">
-			<h1 class="leaflet-sidebar-header">Messages<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+			<h1 class="leaflet-sidebar-header">
+				Search
+				<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+			</h1>
+
+
 		</div>
 	</div>
+
 </div>
 <div id="map"></div>
 
