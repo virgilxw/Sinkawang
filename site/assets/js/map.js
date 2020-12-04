@@ -1,14 +1,3 @@
-function reset_style() {
-	layer_Points.eachLayer(function (layer) {
-		layer.setStyle({
-			fillColor: "#66c2a5"
-		})
-	})
-}
-
-
-var map = L.map('map').setView([0.90925, 108.98463], 12);
-
 var default_style = {
 	radius: 5,
 	fillColor: "#66c2a5",
@@ -18,6 +7,56 @@ var default_style = {
 	fillOpacity: 0.6
 }
 
+highlightedPoints = []
+
+function reset_style() {
+	highlightedPoints = []
+	layer_Points.eachLayer(function (layer) {
+		layer.setStyle(default_style)
+	})
+}
+
+function highlightlayerUID(id) {
+
+	highlightedPoints.push(id)
+	val = false
+
+	layer_Points.eachLayer(function (layer) {
+		if (layer.feature.properties.id == id) {
+			layer.setStyle({
+				fillColor: "#ffdd00",
+				color: "#ff0000"
+			})
+			val = true
+
+			map.flyTo([layer._latlng.lat, layer._latlng.lng], 16)
+		}
+	})
+	if (val = false) {
+		throw "Point " + id + " not found"
+	}
+}
+
+function clearlayerUID(id) {
+
+	var index = highlightedPoints.indexOf(id);
+
+	if (index > -1) {
+		highlightedPoints.splice(index, 1);
+	}
+
+	layer_Points.eachLayer(function (layer) {
+		if (layer.feature.properties.id == id) {
+			layer.setStyle(default_style)
+			val = true
+		}
+	})
+	if (val = false) {
+		throw "Point " + id + " not found"
+	}
+}
+
+var map = L.map('map').setView([0.90925, 108.98463], 12);
 
 var layer_OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -80,7 +119,6 @@ $(document).ready(function () {
 	})
 
 	$("#radio-region").click(function (object) {
-		console.log(layer_Points)
 
 		layer_Points.eachLayer(function (layer) {
 			if (layer.feature.properties.region == "west") {
@@ -128,7 +166,6 @@ $(document).ready(function () {
 					'</div>';
 			},
 			option: function (item, escape) {
-				console.log(item)
 				var label = item.name || item.id;
 				var caption = item.name ? item.id : null;
 				return '<div>' +
@@ -142,7 +179,7 @@ $(document).ready(function () {
 			highlightlayerUID(val)
 		},
 		onItemRemove: function (val) {
-			clearlayerUID(e.params.data.id)
+			clearlayerUID(val)
 		},
 		load: function (query, callback) {
 			if (!query.length) return callback();
@@ -177,7 +214,6 @@ $(document).ready(function () {
 					'</div>';
 			},
 			option: function (item, escape) {
-				console.log(item)
 				var label = item.name_chinese || item.id;
 				var caption = item.name_chinese ? item.id : null;
 				return '<div>' +
@@ -191,7 +227,7 @@ $(document).ready(function () {
 			highlightlayerUID(val)
 		},
 		onItemRemove: function (val) {
-			clearlayerUID(e.params.data.id)
+			clearlayerUID(val)
 		},
 		load: function (query, callback) {
 			if (!query.length) return callback();
@@ -225,7 +261,6 @@ $(document).ready(function () {
 					'</div>';
 			},
 			option: function (item, escape) {
-				console.log(item)
 				var label = item.address || item.id;
 				var caption = item.address ? item.id : null;
 				return '<div>' +
@@ -239,7 +274,7 @@ $(document).ready(function () {
 			highlightlayerUID(val)
 		},
 		onItemRemove: function (val) {
-			clearlayerUID(e.params.data.id)
+			clearlayerUID(val)
 		},
 		load: function (query, callback) {
 			if (!query.length) return callback();
