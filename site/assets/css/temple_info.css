@@ -1,0 +1,44 @@
+/*
+*
+* gallery
+*
+*/
+
+/*! div style */
+.image-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+.box {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+
+.img-gallery {
+
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.box {
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.box {
+		flex: 100%;
+		max-width: 100%;
+	}
+}
