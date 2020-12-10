@@ -28,6 +28,23 @@
 	}
 }
 
+#mapcont {
+	width: 50%;
+	padding-top: 28.125%;/
+	/* 1:1 Aspect Ratio */
+	position: relative;
+	/* If you want text inside of it */
+	margin: 10px;
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
 @media screen and (max-width: 800px) {
 	.box {
 		flex: 50%;

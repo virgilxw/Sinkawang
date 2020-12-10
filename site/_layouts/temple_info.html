@@ -42,19 +42,26 @@
 	<div class="body_cont">
 		{% include navbar.html %}
 
-		<h1 id="title">placeholder</h1>
+		<h1 id="title"></h1>
 		<ul>
-			<li><b>Local Name</b>: <span id="local_name"></span></li>
 			<li><b>Chinese Name (in Hanzi)</b>: <span id="hanzi"></span></li>
 			<li><b>Chinese Name (in Pinyin)</b>: <span id="pinyin"></span></li>
 			<li><b>Neighbourhood</b>: <span id="neighbourhood"></span></li>
 			<li><b>Region</b>: <span id="region"></span></li>
 		</ul>
 
+		<div id="mapcont">
+			<div id="map"></div>
+		</div>
+
 		<div class="gallery">
 			{{content}}
 		</div>
+
 	</div>
+
+
+	<script src="{{"/assets/js/temple_info.js" | relative_url }}"></script>
 </body>
 
 </html>
