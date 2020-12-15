@@ -1,3 +1,16 @@
+// Function to generate popup
+function popup(feature, layer) {
+	var properties = layer.feature.properties
+
+	string = ""
+
+	if (properties.ref_no !== "") {
+		string = "<p> There are pictures, floor plans, and adetailed description associated with this temple. <a href='./temples/" + properties.ref_no.padStart(3, '0') + ".html'> Click here to view them </p> </a>"
+	}
+
+	layer.bindPopup("<h2>" + properties.name_indo + "</h2><h4>" + properties.name_hanzi + "</h4><h4>" + properties.name_pinyin + "</h4>" + "<p><b>Address: </b>" + properties.address + "</p><p><b>Neighourhood: </b>" + properties.neighbourhood + "</p>" + string)
+}
+
 var default_style = {
 	radius: 5,
 	fillColor: "#66c2a5",
@@ -65,7 +78,8 @@ var layer_OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 var layer_Points = new L.GeoJSON.AJAX("./assets/geojson/3_combined.geojson", {
 	pointToLayer: function (feature, latlng) {
 		return L.circleMarker(latlng, default_style)
-	}
+	},
+	onEachFeature: popup
 }).addTo(map);
 
 var baseMaps = [{
