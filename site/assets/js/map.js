@@ -5,10 +5,13 @@ function popup(feature, layer) {
 	string = ""
 
 	if (properties.ref_no !== "") {
-		string = "<p> There are pictures, floor plans, and adetailed description associated with this temple. <a href='./temples/" + properties.ref_no.padStart(3, '0') + ".html'> Click here to view them </p> </a>"
+		temp_num = properties.ref_no.padStart(3, '0')
+		string = "<p> There are pictures, floor plans, and adetailed description associated with this temple. <a href='./temples/" + temp_num + ".html'> Click here to view them </p> </a>" + "<iframe id='frame' onload='this.contentWindow.document.documentElement.scrollTop=520' src='./temples/" + temp_num + ".html'></iframe>"
 	}
 
 	layer.bindPopup("<h2>" + properties.name_indo + "</h2><h4>" + properties.name_hanzi + "</h4><h4>" + properties.name_pinyin + "</h4>" + "<p><b>Address: </b>" + properties.address + "</p><p><b>Neighourhood: </b>" + properties.neighbourhood + "</p>" + string)
+
+	console.log($("#frame"))
 }
 
 var default_style = {
