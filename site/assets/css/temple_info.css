@@ -4,28 +4,14 @@
 *
 */
 
+h1 {
+	padding: 20px;
+}
+
 /*! div style */
-.image-gallery {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0 4px;
-}
 
-.box {
-	flex: 25%;
-	max-width: 25%;
-	padding: 0 4px;
-}
-
-.img-gallery {
-
-	margin-top: 8px;
-	vertical-align: middle;
-	width: 100%;
-
-	&:hover {
-		transform: scale(1.05);
-	}
+.hoverZoomLink {
+	width: 300px;
 }
 
 #mapcont {

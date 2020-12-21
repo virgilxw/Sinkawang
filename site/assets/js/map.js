@@ -93,7 +93,7 @@ var overlays = [{
 	groupName: "Data",
 	expanded: true,
 	layers: {
-		"Village points": layer_Points
+		"Temple Points": layer_Points
 	}
 }]
 
