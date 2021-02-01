@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>The Singkawang Project</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="./css/normalize.css">
+
+	<!-- favicon -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+	<!-- jquery-csv -->
+	<script src="./js/jquery.csv.js"></script>
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Leaflet styled layer control-->
+	<link rel="stylesheet" href="./css/styledLayerControl.css" />
+	<script src="./js/styledLayerControl.js"></script>
+
+	<!-- Leaflet sidebar -->
+	<link rel="stylesheet" href="./css/leaflet-sidebar.css" />
+	<script src="./js/leaflet-sidebar.js"></script>
+
+	<!-- Leaflet.AJAX -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js" integrity="sha256-rVeyUZMfAHhQJ7hvWaHrKknTDdqGcn1gxBBJA++E4z8=" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+	<div class="cont">
+		<header></header>
+		<!-- optionally define the sidebar content via HTML markup -->
+		<div id="sidebar" class="leaflet-sidebar collapsed">
+
+			<!-- nav tabs -->
+			<div class="leaflet-sidebar-tabs">
+				<!-- top aligned tabs -->
+				<ul role="tablist">
+					<li><a href="#home" role="tab"><i class="fa fa-bars active"></i></a></li>
+					<li><a href="#info" role="tab"><i class="fa fa-info-circle"></i></a></li>
+				</ul>
+
+				<!-- bottom aligned tabs -->
+				<ul role="tablist">
+					<li><a href="#aboutus" role="tab"><i class="fa fa-address-card"></i></a></li>
+					<li><a href="https://github.com/virgilxw/Sinkawang"><i class="fa fa-github"></i></a></li>
+				</ul>
+			</div>
+
+			<!-- panel content -->
+			<div class="leaflet-sidebar-content">
+				<div class="leaflet-sidebar-pane" id="home">
+					<h1 class="leaflet-sidebar-header">
+						The Singkawang Project
+
+						<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+					</h1>
+
+					<h2>Chinese Religious Places in Singkawang, West Kalimantan</h2>
+					<p> This is a digital database and interactive map of all of the Chinese religious places in the city of Singkawang, West Kalimantan, in Indonesian Borneo. The information, photographs, site maps, historical documents, and temple reports have been created by Dr. Emily Zoe Hertzman and assistant researcher Edhylius Sean. </p>
+
+					<p>Singkawang is a city of roughly 220,000, and is the only city in Indonesia with a majority Chinese Indonesian population. It is located on the coast of West Kalimantan between the provincial capital Pontianak to the south and smaller cities and towns to north, such as Sambas and Pemangkat. The inhabitants of Singkawang are predominantly speakers of the Hakka dialect. San Kheu Jong, as the city is called in Hakka, is known across Indonesia as the “city of a thousand temples” in recognition of the density of Chinese religious places. With a metropolitan administrative area of 504 km<sup>2</sup>, San Kheu Jong includes many villages and sub-urban neighbourhoods, which adds to the amount and diversity of religious places that are visible and striking across the urban and rural landscape. </p>
+
+					<p>The city has a high level of religiosity with multiple ethnic and religious traditions holding numerous annual events and rituals, the largest of which is Cap Go Meh. This database tries to represent the centrality of these religious sites in the everyday life of members of Chinese Indonesian community by mapping and visually representing them, their spatial relationships, density and diversity. The Chinese religious places in Singkawang that are part of this comprehensive map and database include temples that range from being over 150 years old to temples that are currently under construction. We include Buddhist temples of all the major Buddhist sects, as well as temples that are oriented towards Daoism, Confucianism, the Three Teachings (Indo. Tri Dharma; Hak. Sam Kau) or other places that can be considered sites of Chinese Folk Religion. We also include the house altars of Chinese spirit-mediums and expert healers, for which the city is well known, with the number of resident spirit-mediums in the hundreds. </p>
+
+					<p>At this time, this database does not include Christian religious places although these are also types of “Chinese religion” in Singkawang and in Indonesia. The next phase of the project will expand to include churches, as well as to other Chinese institutions and places of </p>
+				</div>
+
+				<div class="leaflet-sidebar-pane" id="info">
+					<h1 class="leaflet-sidebar-header">
+						Information
+						<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+					</h1>
+
+					<div class="container">
+						<ul>
+							<div class="row">
+								<li><b>Name (in Indonesian): </b> <span id="indo">Click on a point to begin.</span></li>
+							</div>
+							<div class="row pt-2">
+								<li><b>Name (in Hanzi): </b> <span id="hanzi"></span></li>
+							</div>
+							<div class="row pt-2">
+								<li><b>Name (in Pinyin): </b> <span id="pinyin"></span></li>
+							</div>
+							<div class="row pt-2">
+								<li><b>Neighbourhood:</b> <span id="neighbourhood"></span></li>
+							</div>
+							<div class="row pt-2">
+								<li><b>District:</b> <span id="region"></span></li>
+							</div>
+							<div class="row pt-2">
+								<li><b>Address: </b> <span id="address"></span></li>
+							</div>
+							<div class="row pt-2">
+								<li><b>Latlng: </b><span id="latlng"></span></li>
+							</div>
+						</ul>
+					</div>
+				</div>
+
+				<div class="leaflet-sidebar-pane" id="aboutus">
+					<h1 class="leaflet-sidebar-header">
+						About Us
+						<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+					</h1>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-4"><img src="./assets/Emily.jpg"></div>
+							<div class="col-md-8">
+								<p><b>Emily Hertzman</b> is a sociocultural anthropologist whose research focuses on mobilities, identities, religious practices, and politics. She received her PhD in Anthropology from the University of Toronto in 2017. Her theoretical and empirical research is centered around understanding how peoples’ concepts of home and belonging are transformed under broader shifting social conditions. She is currently a Research Fellow at the Asia Research Institute at the National University of Singapore in the Religion and Globalisation Cluster. </p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4"><img src="./assets/Edhylius.jpg"></div>
+							<div class="col-md-8">
+								<p><b>Edhylius Sean</b> is a socio-cultural observer, writer and native of Singkawang. He was the former head of Singkawang’s Buddhist Religious Development Institute and he often takes key roles in the committee that organizes the city’s annual Cap Go Meh event. He has been working as a research assistant and collaborator with Emily Hertzman for the past eight years, bring expertise in the areas of interviewing, translating, designing, data management and photography.
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<p><b>Website development by:</b></p>
+						</div>
+						<div class="row">
+							<div class="col-sm-4"></div>
+							<div class="col-md-8">
+								<p><b>Reuben X. Wang</b> is a research apparentice at the National University of Singapore's Geography department.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="map"></div>
+	</div>
+
+
+	<script src="./js/main.js"></script>
+</body></html>

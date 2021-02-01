@@ -1,0 +1,94 @@
+/*
+ * Color Scheme
+ * 
+ * Red: #D92727
+ * Orange: #FC8F12
+ * Yellow: #FFE433
+ * Green: #6FCC43
+ * Blue: #0DB8B5
+ */
+
+body {
+	margin: 0;
+}
+
+.cont {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: stretch;
+	height: 100vh
+}
+
+header {
+	height: 70px;
+	background-color: #D92727;
+}
+
+.leaflet-sidebar-tabs > ul > li.active {
+	background-color: #FC8F12;
+}
+
+.leaflet-sidebar-header {
+	background-color: #FC8F12;
+}
+
+#map {
+	flex: 3;
+}
+
+.container {
+	padding-top: 30px;
+}
+
+#aboutus img {
+	width: 100px;
+}
+
+.alert {
+	margin: 5px;
+}
+
+h2 {
+	margin: 10px 10px 30px 10px;
+	font-size: 20px;
+}
+
+#one {
+	background-color: rgba(166, 206, 227, 0.7);
+}
+
+#two {
+	background-color: rgba(31, 120, 180, 0.7);
+}
+
+#three {
+	background-color: rgba(178, 223, 138, 0.7);
+}
+
+#four {
+	background-color: rgba(51, 160, 44, 0.7);
+}
+
+#five {
+	background-color: rgba(251, 154, 153, 0.7);
+}
+
+#six {
+	background-color: rgba(227, 26, 28, 0.7);
+}
+
+#seven {
+	background-color: rgba(253, 191, 111, 0.7);
+}
+
+#eight {
+	background-color: rgba(255, 127, 0, 0.7);
+}
+
+#nine {
+	background-color: rgba(202, 178, 214, 0.7);
+}
+
+#ten {
+	background-color: rgba(106, 61, 154, 0.7);
+}

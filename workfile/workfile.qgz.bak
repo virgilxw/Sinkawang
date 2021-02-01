@@ -1,0 +1,763 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="" version="3.4.10-Madeira">
+  <homePath path=""/>
+  <title></title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+      <srsid>3452</srsid>
+      <srid>4326</srid>
+      <authid>EPSG:4326</authid>
+      <description>WGS 84</description>
+      <projectionacronym>longlat</projectionacronym>
+      <ellipsoidacronym>WGS84</ellipsoidacronym>
+      <geographicflag>true</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties/>
+    <layer-tree-layer id="output_d3e758c6_e37f_4d19_b780_f4d8e5a69452" providerKey="memory" checked="Qt::Checked" expanded="1" name="Joined layer" source="Point?crs=EPSG:4326&amp;field=name_indo:string(0,0)&amp;field=name_hanzi:string(0,0)&amp;field=name_pinyin:string(0,0)&amp;field=neighbourhood:string(0,0)&amp;field=gps_lat:double(0,0)&amp;field=gps_lon:double(0,0)&amp;field=address:string(0,0)&amp;field=ref_no:integer(0,0)&amp;field=region:string(0,0)&amp;field=id:string(0,0)&amp;field=num_images:integer(0,0)&amp;field=Name:string(80,0)&amp;uid={00fe2855-5ee9-4a2d-b080-12f8a46fe8e7}">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer id="Districts_73c68c62_810c_48bb_a92a_1b7f2ac7b92d" providerKey="ogr" checked="Qt::Checked" expanded="1" name="Districts" source="./Districts.shp">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer id="OSM_Standard_37b29cf6_115f_4414_9700_2396b1a6c280" providerKey="wms" checked="Qt::Checked" expanded="1" name="OSM Standard" source="type=xyz&amp;zmin=0&amp;zmax=19&amp;url=http://tile.openstreetmap.org/{z}/{x}/{y}.png">
+      <customproperties/>
+    </layer-tree-layer>
+    <custom-order enabled="0">
+      <item>OSM_Standard_37b29cf6_115f_4414_9700_2396b1a6c280</item>
+      <item>Districts_73c68c62_810c_48bb_a92a_1b7f2ac7b92d</item>
+      <item>output_d3e758c6_e37f_4d19_b780_f4d8e5a69452</item>
+    </custom-order>
+  </layer-tree-group>
+  <snapping-settings intersection-snapping="0" tolerance="12" enabled="0" unit="1" mode="2" type="1">
+    <individual-layer-settings>
+      <layer-setting id="Districts_73c68c62_810c_48bb_a92a_1b7f2ac7b92d" tolerance="12" enabled="0" units="1" type="1"/>
+      <layer-setting id="output_d3e758c6_e37f_4d19_b780_f4d8e5a69452" tolerance="12" enabled="0" units="1" type="1"/>
+    </individual-layer-settings>
+  </snapping-settings>
+  <relations/>
+  <mapcanvas annotationsVisible="1" name="theMapCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>108.76250406469731047</xmin>
+      <ymin>0.61358913721785702</ymin>
+      <xmax>109.26125406469614632</xmax>
+      <ymax>1.07850580411782393</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <projectModels/>
+  <legend updateDrawingOrder="true">
+    <legendlayer open="true" showFeatureCount="0" drawingOrder="-1" checked="Qt::Checked" name="Joined layer">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile layerid="output_d3e758c6_e37f_4d19_b780_f4d8e5a69452" visible="1" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer open="true" showFeatureCount="0" drawingOrder="-1" checked="Qt::Checked" name="Districts">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile layerid="Districts_73c68c62_810c_48bb_a92a_1b7f2ac7b92d" visible="1" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer open="true" showFeatureCount="0" drawingOrder="-1" checked="Qt::Checked" name="OSM Standard">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile layerid="OSM_Standard_37b29cf6_115f_4414_9700_2396b1a6c280" visible="1" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+  </legend>
+  <mapViewDocks/>
+  <mapViewDocks3D/>
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <projectlayers>
+    <maplayer autoRefreshTime="0" autoRefreshEnabled="0" labelsEnabled="0" hasScaleBasedVisibilityFlag="0" readOnly="0" maxScale="0" styleCategories="AllStyleCategories" simplifyDrawingHints="1" simplifyLocal="1" minScale="1e+08" simplifyDrawingTol="1" refreshOnNotifyMessage="" simplifyMaxScale="1" refreshOnNotifyEnabled="0" type="vector" geometry="Polygon" simplifyAlgorithm="0">
+      <extent>
+        <xmin>108.87377999999999645</xmin>
+        <ymin>0.74515419999999999</ymin>
+        <xmax>109.17604880000000378</xmax>
+        <ymax>1.01801849999999994</ymax>
+      </extent>
+      <id>Districts_73c68c62_810c_48bb_a92a_1b7f2ac7b92d</id>
+      <datasource>./Districts.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Districts</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 forceraster="0" symbollevels="0" enableorderby="0" type="singleSymbol">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="fill" force_rhr="0" name="0">
+            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="141,90,153,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" type="QString" name="name"/>
+                  <Option name="properties"/>
+                  <Option value="collection" type="QString" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property key="dualview/previewExpressions">
+          <value>"id"</value>
+        </property>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks type="StringList">
+          <Option value="" type="QString"/>
+        </activeChecks>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="id">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Name">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias field="id" index="0" name=""/>
+        <alias field="Name" index="1" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default expression="" applyOnUpdate="0" field="id"/>
+        <default expression="" applyOnUpdate="0" field="Name"/>
+      </defaults>
+      <constraints>
+        <constraint field="id" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="Name" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="id" exp=""/>
+        <constraint desc="" field="Name" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="&quot;Name&quot;" actionWidgetStyle="dropDown">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="id"/>
+          <column width="149" hidden="0" type="field" name="Name"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <previewExpression>"id"</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer autoRefreshTime="0" autoRefreshEnabled="0" hasScaleBasedVisibilityFlag="0" maxScale="0" styleCategories="AllStyleCategories" minScale="1e+08" refreshOnNotifyMessage="" refreshOnNotifyEnabled="0" type="raster">
+      <extent>
+        <xmin>-20037508.34278924390673637</xmin>
+        <ymin>-20037508.34278925508260727</ymin>
+        <xmax>20037508.34278924390673637</xmax>
+        <ymax>20037508.34278924390673637</ymax>
+      </extent>
+      <id>OSM_Standard_37b29cf6_115f_4414_9700_2396b1a6c280</id>
+      <datasource>type=xyz&amp;zmin=0&amp;zmax=19&amp;url=http://tile.openstreetmap.org/{z}/{x}/{y}.png</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <attribution href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</attribution>
+      <layername>OSM Standard</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs</proj4>
+          <srsid>3857</srsid>
+          <srid>3857</srid>
+          <authid>EPSG:3857</authid>
+          <description>WGS 84 / Pseudo-Mercator</description>
+          <projectionacronym>merc</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>wms</provider>
+      <noData>
+        <noDataList useSrcNoData="0" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <customproperties>
+        <property key="identify/format" value="Undefined"/>
+      </customproperties>
+      <pipe>
+        <rasterrenderer alphaBand="-1" band="1" opacity="1" type="singlebandcolordata">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeStrength="100" saturation="0" colorizeRed="255" colorizeOn="0" grayscaleMode="0" colorizeGreen="128" colorizeBlue="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer autoRefreshTime="0" autoRefreshEnabled="0" labelsEnabled="0" hasScaleBasedVisibilityFlag="0" readOnly="0" maxScale="0" styleCategories="AllStyleCategories" simplifyDrawingHints="1" simplifyLocal="1" minScale="1e+08" simplifyDrawingTol="1" refreshOnNotifyMessage="" simplifyMaxScale="1" refreshOnNotifyEnabled="0" type="vector" geometry="Point" simplifyAlgorithm="0">
+      <extent>
+        <xmin>108.88694440000000441</xmin>
+        <ymin>0.77027777799999997</ymin>
+        <xmax>109.12444440000000156</xmax>
+        <ymax>0.99166666699999995</ymax>
+      </extent>
+      <id>output_d3e758c6_e37f_4d19_b780_f4d8e5a69452</id>
+      <datasource>memory?geometry=Point&amp;crs=EPSG:4326&amp;field=name_indo:string(0,0)&amp;field=name_hanzi:string(0,0)&amp;field=name_pinyin:string(0,0)&amp;field=neighbourhood:string(0,0)&amp;field=gps_lat:double(0,0)&amp;field=gps_lon:double(0,0)&amp;field=address:string(0,0)&amp;field=ref_no:integer(0,0)&amp;field=region:string(0,0)&amp;field=id:string(0,0)&amp;field=num_images:integer(0,0)&amp;field=Name:string(80,0)</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Joined layer</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">memory</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 forceraster="0" symbollevels="0" enableorderby="0" type="singleSymbol">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="marker" force_rhr="0" name="0">
+            <layer enabled="1" pass="0" class="SimpleMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="229,182,54,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="2"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" type="QString" name="name"/>
+                  <Option name="properties"/>
+                  <Option value="collection" type="QString" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property key="dualview/previewExpressions">
+          <value>"name_indo"</value>
+        </property>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks type="StringList">
+          <Option value="" type="QString"/>
+        </activeChecks>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="name_indo">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="name_hanzi">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="name_pinyin">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="neighbourhood">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="gps_lat">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="gps_lon">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="address">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ref_no">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="region">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="id">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="num_images">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Name">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias field="name_indo" index="0" name=""/>
+        <alias field="name_hanzi" index="1" name=""/>
+        <alias field="name_pinyin" index="2" name=""/>
+        <alias field="neighbourhood" index="3" name=""/>
+        <alias field="gps_lat" index="4" name=""/>
+        <alias field="gps_lon" index="5" name=""/>
+        <alias field="address" index="6" name=""/>
+        <alias field="ref_no" index="7" name=""/>
+        <alias field="region" index="8" name=""/>
+        <alias field="id" index="9" name=""/>
+        <alias field="num_images" index="10" name=""/>
+        <alias field="Name" index="11" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default expression="" applyOnUpdate="0" field="name_indo"/>
+        <default expression="" applyOnUpdate="0" field="name_hanzi"/>
+        <default expression="" applyOnUpdate="0" field="name_pinyin"/>
+        <default expression="" applyOnUpdate="0" field="neighbourhood"/>
+        <default expression="" applyOnUpdate="0" field="gps_lat"/>
+        <default expression="" applyOnUpdate="0" field="gps_lon"/>
+        <default expression="" applyOnUpdate="0" field="address"/>
+        <default expression="" applyOnUpdate="0" field="ref_no"/>
+        <default expression="" applyOnUpdate="0" field="region"/>
+        <default expression="" applyOnUpdate="0" field="id"/>
+        <default expression="" applyOnUpdate="0" field="num_images"/>
+        <default expression="" applyOnUpdate="0" field="Name"/>
+      </defaults>
+      <constraints>
+        <constraint field="name_indo" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="name_hanzi" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="name_pinyin" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="neighbourhood" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="gps_lat" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="gps_lon" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="address" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="ref_no" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="region" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="id" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="num_images" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+        <constraint field="Name" constraints="0" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" field="name_indo" exp=""/>
+        <constraint desc="" field="name_hanzi" exp=""/>
+        <constraint desc="" field="name_pinyin" exp=""/>
+        <constraint desc="" field="neighbourhood" exp=""/>
+        <constraint desc="" field="gps_lat" exp=""/>
+        <constraint desc="" field="gps_lon" exp=""/>
+        <constraint desc="" field="address" exp=""/>
+        <constraint desc="" field="ref_no" exp=""/>
+        <constraint desc="" field="region" exp=""/>
+        <constraint desc="" field="id" exp=""/>
+        <constraint desc="" field="num_images" exp=""/>
+        <constraint desc="" field="Name" exp=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="name_indo"/>
+          <column width="-1" hidden="0" type="field" name="name_hanzi"/>
+          <column width="-1" hidden="0" type="field" name="name_pinyin"/>
+          <column width="-1" hidden="0" type="field" name="neighbourhood"/>
+          <column width="-1" hidden="0" type="field" name="gps_lat"/>
+          <column width="-1" hidden="0" type="field" name="gps_lon"/>
+          <column width="-1" hidden="0" type="field" name="address"/>
+          <column width="-1" hidden="0" type="field" name="ref_no"/>
+          <column width="-1" hidden="0" type="field" name="region"/>
+          <column width="-1" hidden="0" type="field" name="id"/>
+          <column width="-1" hidden="0" type="field" name="num_images"/>
+          <column width="-1" hidden="0" type="field" name="Name"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <previewExpression>"name_indo"</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="OSM_Standard_37b29cf6_115f_4414_9700_2396b1a6c280"/>
+    <layer id="Districts_73c68c62_810c_48bb_a92a_1b7f2ac7b92d"/>
+    <layer id="output_d3e758c6_e37f_4d19_b780_f4d8e5a69452"/>
+  </layerorder>
+  <properties>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <Measure>
+      <Ellipsoid type="QString">WGS84</Ellipsoid>
+    </Measure>
+    <PAL>
+      <CandidatesPolygon type="int">30</CandidatesPolygon>
+      <TextFormat type="int">0</TextFormat>
+      <SearchMethod type="int">0</SearchMethod>
+      <CandidatesPoint type="int">16</CandidatesPoint>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
+      <ShowingAllLabels type="bool">false</ShowingAllLabels>
+      <ShowingCandidates type="bool">false</ShowingCandidates>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <CandidatesLine type="int">50</CandidatesLine>
+    </PAL>
+    <Gui>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+      <SelectionColorRedPart type="int">178</SelectionColorRedPart>
+      <SelectionColorGreenPart type="int">223</SelectionColorGreenPart>
+      <SelectionColorBluePart type="int">138</SelectionColorBluePart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+    </Gui>
+    <PositionPrecision>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+    </PositionPrecision>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
+  </properties>
+  <visibility-presets/>
+  <transformContext/>
+  <projectMetadata>
+    <identifier></identifier>
+    <parentidentifier></parentidentifier>
+    <language></language>
+    <type></type>
+    <title></title>
+    <abstract></abstract>
+    <links/>
+    <author>Reuben Wang</author>
+    <creation>2021-02-01T14:32:08</creation>
+  </projectMetadata>
+  <Annotations/>
+  <Layouts/>
+</qgis>
