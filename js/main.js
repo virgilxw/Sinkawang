@@ -18,7 +18,7 @@ function clickpoint(indata) {
 	$("#indo").empty().append(indata["name_indo"])
 	$("#hanzi").empty().append(indata["name_hanzi"])
 	$("#pinyin").empty().append(indata["name_pinyin"])
-	$("#neighbourhood").empty().append(indata["neighbourhood"])
+	$("#road").empty().append(indata["road"])
 	$("#region").empty().append(indata["region"])
 	$("#address").empty().append(indata["address"])
 	$("#latlng").empty().append(indata["gps_lat"] + ", " + indata["gps_lon"])
@@ -224,6 +224,14 @@ $(document).ready(function () {
 	$.ajax({
 		type: "GET",
 		url: "./assets/2_combined.csv",
+		dataType: "text",
+		success: function (indata) {
+			processCSV(indata);
+		}
+	});
+	$.ajax({
+		type: "GET",
+		url: "./assets/altars.csv",
 		dataType: "text",
 		success: function (indata) {
 			processCSV(indata);
