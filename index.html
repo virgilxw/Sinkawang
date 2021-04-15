@@ -50,7 +50,8 @@
 				<!-- top aligned tabs -->
 				<ul role="tablist">
 					<li><a href="#home" role="tab"><i class="fa fa-bars active"></i></a></li>
-					<li><a href="#info" role="tab"><i class="fa fa-info-circle"></i></a></li>
+					<li><a href="#temple" role="tab"><i class="fa fa-info-circle"></i></a></li>
+					<li><a href="#altar" role="tab"><i class="fa fa-info-circle"></i></a></li>
 				</ul>
 
 				<!-- bottom aligned tabs -->
@@ -79,9 +80,9 @@
 					<p>At this time, this database does not include Christian religious places although these are also types of “Chinese religion” in Singkawang and in Indonesia. The next phase of the project will expand to include churches, as well as to other Chinese institutions and places of </p>
 				</div>
 
-				<div class="leaflet-sidebar-pane" id="info">
+				<div class="leaflet-sidebar-pane" id="temple">
 					<h1 class="leaflet-sidebar-header">
-						Information
+						Temple Information
 						<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
 					</h1>
 
@@ -110,6 +111,34 @@
 							</div>
 						</ul>
 						<div class="row pt-3" id="gallery"></div>
+					</div>
+				</div>
+
+				<div class="leaflet-sidebar-pane" id="altar">
+					<h1 class="leaflet-sidebar-header">
+						Altar Information
+						<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+					</h1>
+
+					<div class="container">
+						<ul>
+							<div class="row">
+								<li><b>Altar Name: </b> <span id="altar_name">Click on a point to begin.</span></li>
+							</div>
+							<div class="row pt-2">
+								<li><b>Address:</b> <span id="altar_address"></span></li>
+							</div>
+							<div class="row pt-2">
+								<li><b>Village:</b> <span id="altar_village"></span></li>
+							</div>
+							<div class="row pt-2">
+								<li><b>District: </b> <span id="altar_district"></span></li>
+							</div>
+							<div class="row pt-2">
+								<li><b>Latlng: </b><span id="altar_latlng"></span></li>
+							</div>
+						</ul>
+						<div class="row pt-3" id="altar_gallery"></div>
 					</div>
 				</div>
 
@@ -152,6 +181,4 @@
 
 
 	<script src="./js/main.js"></script>
-</body>
-
-</html>
+</body></html>
