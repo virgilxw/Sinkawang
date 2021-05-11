@@ -205,24 +205,25 @@ function clickpoint_altar(indata) {
 
 	// Gallery function
 
-	console.log(indata)
 	if (indata["photos"] == "Y")
 
-		if (indata["ref_no"] != "") {
+		if (indata["photo_ref"] != "") {
 
 			$("#gallery").empty()
 			$("#altar_gallery").empty()
-			console.log(indata["num_images"])
 
 			htmlcode = "<h2>There are images associated with this site:</h2>"
 			$("#altar_gallery").append(htmlcode)
 
+			var file_no = pad(indata["photo_ref"], 3);
+			console.log(file_no)
+
 			for (let i = 1; i <= indata["num_images"]; i++) {
-				img_no = pad(i, 3);
+				var img_no = pad(i, 3);
 
-				file_name = img_no + ".jpg";
+				var file_name = img_no + ".jpg";
 
-				htmlcode = "<div class='image row'><div class='img-wrapper'><a href='./img/altars/" + img_no + "/" + file_name + "'><img src='./img/altars/" + img_no + "/" + file_name + "'><div class='img-overlay'><i class='fa fa-plus-circle' aria-hidden='true'></i></div></a></div></div>"
+				htmlcode = "<div class='image row'><div class='img-wrapper'><a href='./img/altars/" + file_no + "/" + file_name + "'><img src='./img/altars/" + file_no + "/" + file_name + "'><div class='img-overlay'><i class='fa fa-plus-circle' aria-hidden='true'></i></div></a></div></div>"
 
 				$("#altar_gallery").append(htmlcode)
 			}
